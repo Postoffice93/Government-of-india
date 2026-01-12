@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Post GDS Recruitment 2026</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        :root { --red: #d40000; --yellow: #ffcc00; --green: #27ae60; --blue: #1a73e8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background-color: #f4f4f4; color: #333; }
+
+        header { background: var(--yellow); padding: 25px 10px; text-align: center; border-bottom: 5px solid var(--red); }
+        header h1 { color: var(--red); font-size: 1.8rem; margin-bottom: 5px; }
+        header p { color: #000; font-weight: bold; font-size: 1rem; }
+
+        .container { max-width: 650px; margin: 20px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        
+        .info-table { width: 100%; background: #fff9e6; border: 1px solid #ffe680; border-radius: 10px; margin-bottom: 20px; border-collapse: collapse; }
+        .info-table td { padding: 12px 15px; border-bottom: 1px solid #eee; text-align: left; font-size: 0.95rem; }
+        .info-table td:last-child { text-align: right; font-weight: bold; }
+
+        .salary-bar { background: var(--green); color: white; padding: 12px; border-radius: 8px; font-weight: bold; text-align: center; margin-bottom: 15px; }
+        .direct-tag { background: #eef; color: var(--blue); padding: 5px 15px; border-radius: 5px; display: inline-block; margin-bottom: 15px; font-weight: bold; border: 1px solid var(--blue); }
+
+        .apply-btn { background: linear-gradient(180deg, #d40000 0%, #a00000 100%); color: white; padding: 18px; font-size: 1.4rem; font-weight: bold; border-radius: 50px; border: none; width: 100%; cursor: pointer; box-shadow: 0 10px 20px rgba(212, 0, 0, 0.4); text-transform: uppercase; }
+
+        .step { display: none; }
+        .step.active { display: block; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.85rem; color: #444; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.9rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        
+        .otp-row { display: flex; gap: 5px; margin-top: 5px; }
+        .otp-btn { background: var(--blue); color: white; border: none; padding: 5px 10px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; }
+
+        .gender-group { display: flex; gap: 20px; padding: 10px 0; }
+        .gender-group label { display: flex; align-items: center; gap: 5px; font-weight: normal; cursor: pointer; font-size: 0.9rem; }
+        .gender-group input { width: auto; }
+
+        .address-header { background: #f8f9fa; padding: 8px; margin: 15px 0; border-left: 4px solid var(--red); font-weight: bold; }
+
+        .btn-box { display: flex; justify-content: space-between; margin-top: 25px; }
+        .nav-btn { padding: 12px 25px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        .next { background: var(--red); color: white; }
+        .prev { background: #666; color: white; }
+
+        .qr-section { text-align: center; background: #f9f9f9; padding: 20px; border: 2px dashed #ccc; margin: 15px 0; border-radius: 10px; }
+        .qr-section img { width: 220px; height: auto; border: 5px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        #thank-you { display: none; text-align: center; padding: 40px 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>भारतीय डाक विभाग</h1>
+    <p>Department of Posts, Govt. of India</p>
+</header>
+
+<div class="container">
+    <section id="landing-page">
+        <h2 style="color: var(--red); text-align:center; margin-bottom: 10px; text-decoration: underline;">Dak Sevak / Sevika Bharti 2026</h2>
+        <div style="text-align: center;"><span class="direct-tag">Direct Recruitment</span></div>
+        <table class="info-table">
+            <tr><td>Post (Male):</td><td>742</td></tr>
+            <tr><td>Post (Female):</td><td>1440</td></tr>
+            <tr><td>Total Posts:</td><td>2182</td></tr>
+            <tr><td>Qualification:</td><td>Matric (10th) Pass</td></tr>
+            <tr><td>Start Date:</td><td>05/01/2026</td></tr>
+            <tr><td>End Date:</td><td>28/01/2026</td></tr>
+        </table>
+        <div class="salary-bar">Salary: ₹28,000 to ₹58,000 Per Month</div>
+        <button class="apply-btn" onclick="openForm()">APPLY NOW ONLINE</button>
+    </section>
+
+    <section id="form-section" style="display:none;">
+        <form id="appForm">
+            <div class="step active">
+                <h3 style="color: var(--red); margin-bottom: 15px; border-bottom: 2px solid #eee;">1. Personal Details</h3>
+                <div class="grid">
+                    <div class="form-group"><label>First Name</label><input type="text" id="fName" required></div>
+                    <div class="form-group"><label>Last Name</label><input type="text" id="lName" required></div>
+                </div>
+                
+                <div class="grid">
+                    <div class="form-group"><label>Father's Name</label><input type="text" id="fatherName" required></div>
+                    <div class="form-group"><label>Mother's Name</label><input type="text" id="motherName" required></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="gender-group">
+                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <div class="otp-row">
+                        <input type="tel" id="mobile" required>
+                        <button type="button" class="otp-btn" onclick="alert('OTP sent to Mobile!')">Send OTP</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="otp-row">
+                        <input type="email" id="email" required>
+                        <button type="button" class="otp-btn" onclick="alert('OTP sent to Email!')">Send OTP</button>
+                    </div>
+                </div>
+
+                <div class="address-header">Permanent Address</div>
+                <div class="grid">
+                    <div class="form-group"><label>Street 1</label><input type="text" id="p_street1" required></div>
+                    <div class="form-group"><label>Street 2</label><input type="text" id="p_street2"></div>
+                </div>
+                <div class="grid">
+                    <div class="form-group"><label>City</label><input type="text" id="p_city" required></div>
+                    <div class="form-group"><label>District</label><input type="text" id="p_dist" required></div>
+                </div>
+                <div class="grid">
+                    <div class="form-group"><label>State</label><input type="text" id="p_state" required></div>
+                    <div class="form-group"><label>Pin Code</label><input type="number" id="p_pin" required></div>
+                </div>
+
+                <div class="address-header">Correspondence Address</div>
+                <div style="margin-bottom: 10px;">
+                    <label style="font-weight: normal; font-size: 0.8rem; cursor: pointer;">
+                        <input type="checkbox" id="same_address" onclick="copyAddress()"> Same as Permanent Address
+                    </label>
+                </div>
+                <div class="grid">
+                    <div class="form-group"><label>Street 1</label><input type="text" id="c_street1" required></div>
+                    <div class="form-group"><label>Street 2</label><input type="text" id="c_street2"></div>
+                </div>
+                <div class="grid">
+                    <div class="form-group"><label>City</label><input type="text" id="c_city" required></div>
+                    <div class="form-group"><label>District</label><input type="text" id="c_dist" required></div>
+                </div>
+                <div class="grid">
+                    <div class="form-group"><label>State</label><input type="text" id="c_state" required></div>
+                    <div class="form-group"><label>Pin Code</label><input type="number" id="c_pin" required></div>
+                </div>
+
+                <div class="btn-box">
+                    <button type="button" class="nav-btn prev" onclick="location.reload()">Cancel</button>
+                    <button type="button" class="nav-btn next" onclick="changeStep(1)">Next Step &raquo;</button>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3 style="color: var(--red); margin-bottom: 15px;">2. Upload Documents</h3>
+                <div class="form-group"><label>Aadhar Card</label><input type="file" required></div>
+                <div class="form-group"><label>Matric Marksheet</label><input type="file" required></div>
+                <div class="grid">
+                    <div class="form-group"><label>Passport Photo</label><input type="file" required></div>
+                    <div class="form-group"><label>Signature Scan</label><input type="file" required></div>
+                </div>
+                <div class="btn-box">
+                    <button type="button" class="nav-btn prev" onclick="changeStep(-1)">Back</button>
+                    <button type="button" class="nav-btn next" onclick="changeStep(1)">Next: Payment</button>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3 style="color: var(--red); margin-bottom: 15px;">3. Fee Payment (₹500)</h3>
+                <div class="qr-section">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=ar85410797@okicici&am=500&cu=INR" alt="QR Code">
+                    <p>UPI ID: <strong>ar85410797@okicici</strong></p>
+                    <p style="color:var(--green); font-weight:bold;">Amount: ₹500</p>
+                </div>
+                <div class="form-group">
+                    <label>Transaction ID / UTR No.</label>
+                    <input type="text" id="utr" required>
+                </div>
+                <div class="btn-box">
+                    <button type="button" class="nav-btn prev" onclick="changeStep(-1)">Back</button>
+                    <button type="submit" class="nav-btn next" style="background: green;">Final Submit</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section id="thank-you">
+        <h2 style="color: var(--green); margin-bottom: 20px;">🎉 Registration Successful!</h2>
+        <p>Aapka application jama ho gaya hai.</p>
+        <div style="background: #f0f7ff; padding: 15px; border-radius: 10px; margin: 20px 0;">
+            <p><strong>Note:</strong> Interview date will be notified via <strong>Email.</strong></p>
+        </div>
+        <button class="apply-btn" style="background: #1a73e8; font-size: 1.1rem;" onclick="generatePDF()">Download PDF Form</button>
+        <button class="nav-btn prev" style="margin-top:20px; width: 100%;" onclick="location.reload()">Exit</button>
+    </section>
+</div>
+
+<div id="pdf-template" style="display:none; padding:40px; border:2px solid #333;">
+    <h1 style="text-align:center; color:red;">INDIA POST RECRUITMENT 2026</h1>
+    <hr style="margin:20px 0;">
+    <p><b>Name:</b> <span id="pdf_n"></span></p>
+    <p><b>Mobile:</b> <span id="pdf_m"></span></p>
+    <p><b>Payment:</b> PAID (₹500)</p>
+    <p><b>UTR No:</b> <span id="pdf_u"></span></p>
+</div>
+
+<script>
+    function openForm() {
+        document.getElementById('landing-page').style.display = 'none';
+        document.getElementById('form-section').style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    let currentStep = 0;
+    const steps = document.querySelectorAll(".step");
+
+    function changeStep(n) {
+        steps[currentStep].classList.remove("active");
+        currentStep += n;
+        steps[currentStep].classList.add("active");
+        window.scrollTo(0, 0);
+    }
+
+    function copyAddress() {
+        if(document.getElementById('same_address').checked) {
+            document.getElementById('c_street1').value = document.getElementById('p_street1').value;
+            document.getElementById('c_street2').value = document.getElementById('p_street2').value;
+            document.getElementById('c_city').value = document.getElementById('p_city').value;
+            document.getElementById('c_dist').value = document.getElementById('p_dist').value;
+            document.getElementById('c_state').value = document.getElementById('p_state').value;
+            document.getElementById('c_pin').value = document.getElementById('p_pin').value;
+        }
+    }
+
+    document.getElementById('appForm').onsubmit = function(e) {
+        e.preventDefault();
+        document.getElementById('pdf_n').innerText = document.getElementById('fName').value + " " + document.getElementById('lName').value;
+        document.getElementById('pdf_m').innerText = document.getElementById('mobile').value;
+        document.getElementById('pdf_u').innerText = document.getElementById('utr').value;
+        document.getElementById('form-section').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+    };
+
+    function generatePDF() {
+        const element = document.getElementById('pdf-template');
+        element.style.display = 'block';
+        const opt = { margin: 1, filename: 'IndiaPost_2026.pdf', html2canvas: { scale: 2 }, jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } };
+        html2pdf().set(opt).from(element).save().then(() => { element.style.display = 'none'; });
+    }
+</script>
+
+</body>
+</html>
